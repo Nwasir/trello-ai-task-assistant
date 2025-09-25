@@ -9,8 +9,11 @@ from transformers import pipeline
 # -----------------------------
 load_dotenv()
 HF_MODEL = "google/flan-t5-small"  # Small, fast model
-TRELLO_KEY = os.getenv("TRELLO_API_KEY")
-TRELLO_TOKEN = os.getenv("TRELLO_TOKEN")
+#TRELLO_KEY = os.getenv("TRELLO_API_KEY")
+#TRELLO_TOKEN = os.getenv("TRELLO_TOKEN")
+
+TRELLO_API_KEY = st.secrets["TRELLO_API_KEY"]
+TRELLO_TOKEN = st.secrets["TRELLO_TOKEN"]
 
 if not TRELLO_KEY or not TRELLO_TOKEN:
     st.warning("⚠️ Trello API Key/Token not found in .env file")
