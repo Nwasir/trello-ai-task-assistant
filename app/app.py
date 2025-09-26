@@ -4,9 +4,8 @@ import streamlit as st
 from dotenv import load_dotenv
 from transformers import pipeline
 
-# -----------------------------
 # Load environment variables
-# -----------------------------
+
 load_dotenv()
 HF_MODEL = "google/flan-t5-small"  # Small, fast model
 #TRELLO_KEY = os.getenv("TRELLO_API_KEY")
