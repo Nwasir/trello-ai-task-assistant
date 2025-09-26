@@ -12,8 +12,8 @@ HF_MODEL = "google/flan-t5-small"  # Small, fast model
 #TRELLO_KEY = os.getenv("TRELLO_API_KEY")
 #TRELLO_TOKEN = os.getenv("TRELLO_TOKEN")
 
-TRELLO_KEY = st.secrets["TRELLO_API_KEY"]
-TRELLO_TOKEN = st.secrets["TRELLO_TOKEN"]
+TRELLO_KEY = st.secrets.get["TRELLO_API_KEY"]
+TRELLO_TOKEN = st.secrets.get["TRELLO_TOKEN"]
 
 if not TRELLO_KEY or not TRELLO_TOKEN:
     st.warning("⚠️ Trello API Key/Token not found in .env file")
